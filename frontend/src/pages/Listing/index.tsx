@@ -35,6 +35,11 @@ function Listing() {
     */
 
 
+
+    const handlePageChange =(newPageNumber: number) =>{
+        setPageNumber(newPageNumber);
+    }
+
     /*
     mapeia cada filme que vem da coleção content, fazendo uma div 
     pra cada um deles
@@ -43,7 +48,7 @@ function Listing() {
     */
     return (
         <>
-            <Pagination />
+            <Pagination page ={page} onChange={handlePageChange} />
 
             <div className="container">
                 <div className="row">
